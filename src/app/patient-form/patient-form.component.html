@@ -1,0 +1,41 @@
+<p>patient-form works!</p>
+<div class="form-container">
+<form (ngSubmit)="onSubmit()">
+<div class="form-group">
+
+<label class="label" for="name">Name</label>
+<input  class="input-field"  type="text" id ="name" name="name"   [(ngModel)]="patient.name
+" required> 
+<label class="label" for="date">Date of Birth</label>
+
+<input class="input-field"  type="date" id ="date" name="date" required [(ngModel)]="patient.date_of_birth"> 
+<label class="label" for="gender">Gender</label>
+
+<select class="input-field" name="gender" id="gender" [(ngModel)]="patient.gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+ 
+    </select>
+    
+    <label class="label" for="service">Type of Service</label>
+
+    <select class="input-field"  name="service" id="service" [(ngModel)]="patient.service">
+        <option value="Inpatient">Inpatient</option>
+        <option value="Outpatient">OutPatient</option>
+       
+        </select>
+<label class="label" for="comment">Comments</label>
+
+<input class="input-field"  type="text" id ="comment" name="comment" required [(ngModel)]="patient.comment"> 
+
+</div>
+
+
+<button type="submit">Submit</button>
+
+
+</form>
+</div>
+
+
+<app-data-table></app-data-table>
